@@ -194,3 +194,122 @@ margin-top:40px;
     display: block;
     margin: 20px auto;
 }
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 8px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    #education .card,
+    #resume .card {
+        width: 90%;
+    }
+
+    .btn,
+    button {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 6px 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    p,
+    li {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
