@@ -162,9 +162,6 @@ section h2{
 /* =========================
    EDUCATION
 ========================= */
-/* =========================
-   EDUCATION
-========================= */
 
 #education{
     padding:100px 10%;
@@ -178,12 +175,12 @@ section h2{
 }
 
 .education-container{
+    width:100%;
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:stretch;
     flex-wrap:wrap;
     gap:30px;
-    max-width:1200px;
     margin:0 auto;
 }
 
@@ -210,21 +207,10 @@ section h2{
     box-shadow:0 0 25px rgba(0,255,255,0.6);
 }
 
-.education-container .card h3{
-    color:#00ffff;
-    margin-bottom:15px;
-}
-
-.education-container .card p{
-    color:#fff;
-    margin:6px 0;
-}
-
-/* Mobile */
-@media(max-width:768px){
-
+@media (max-width:768px){
     .education-container{
         flex-direction:column;
+        align-items:center;
     }
 
     .education-container .card{
