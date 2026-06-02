@@ -162,41 +162,75 @@ section h2{
 /* =========================
    EDUCATION
 ========================= */
+/* =========================
+   EDUCATION
+========================= */
 
 #education{
-    padding:80px 10%;
+    padding:100px 10%;
     text-align:center;
 }
 
 #education h2{
     color:#00ffff;
-    font-size:40px;
-    margin-bottom:40px;
+    font-size:42px;
+    margin-bottom:50px;
 }
 
-#education .card{
+.education-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.education-container .card{
+    width:320px;
+    min-height:220px;
+
     background:#071426;
     border:1px solid #00ffff;
     border-radius:15px;
+
     padding:25px;
-    margin-bottom:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
     box-shadow:0 0 15px rgba(0,255,255,0.3);
     transition:0.3s;
 }
 
-#education .card:hover{
-    transform:translateY(-5px);
+.education-container .card:hover{
+    transform:translateY(-8px);
     box-shadow:0 0 25px rgba(0,255,255,0.6);
 }
 
-#education .card h3{
+.education-container .card h3{
     color:#00ffff;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
-#education .card p{
-    color:#ffffff;
-    margin:5px 0;
+.education-container .card p{
+    color:#fff;
+    margin:6px 0;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .education-container{
+        flex-direction:column;
+    }
+
+    .education-container .card{
+        width:100%;
+        max-width:350px;
+    }
 }
 
 /* =========================
