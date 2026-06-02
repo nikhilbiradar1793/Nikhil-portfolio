@@ -354,3 +354,258 @@ nav ul li a {
 #contact p{
     margin:15px 0;
 }
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020b1c;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    width:100%;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(10px);
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+    color:#00ffff;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00ffff;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.5)),
+    url("images/bg.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+/* ===== TITLE ===== */
+.hero-title{
+    font-size:70px;
+    font-weight:700;
+    color:#00ffff;
+    margin-bottom:30px;
+    text-shadow:0 0 15px #00ffff;
+}
+
+/* ===== GLOW LINE ===== */
+.glow-line{
+    width:350px;
+    height:3px;
+    background:#00ffff;
+    box-shadow:0 0 20px #00ffff;
+    margin-bottom:50px;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:10px solid #ff0000;
+
+    box-shadow:
+    0 0 15px #00ffff,
+    0 0 30px #00ffff,
+    0 0 50px #00ffff;
+
+    margin-bottom:30px;
+}
+
+/* ===== NAME ===== */
+.hero h1{
+    font-size:72px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+/* ===== SHIELD ICON ===== */
+.shield{
+    font-size:50px;
+    color:#00ffff;
+    margin:15px 0;
+}
+
+/* ===== ROLE ===== */
+.hero h2{
+    color:#00ffff;
+    font-size:42px;
+    line-height:1.4;
+    margin-bottom:25px;
+}
+
+/* ===== TAGS ===== */
+.tags{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+    font-size:28px;
+    color:#ffffff;
+}
+
+/* ===== SECTION ===== */
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    color:#00ffff;
+    margin-bottom:50px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:#071426;
+    border:1px solid #00ffff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,255,255,.2);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    nav ul{
+        width:100%;
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:12px;
+        text-align:center;
+    }
+
+    nav ul li a{
+        font-size:14px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .hero{
+        padding-top:40px;
+    }
+
+    .hero-title{
+        font-size:42px;
+    }
+
+    .glow-line{
+        width:220px;
+    }
+
+    .profile-img{
+        width:220px;
+        height:220px;
+        margin-top:20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .tags{
+        font-size:18px;
+        gap:10px;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width:480px){
+
+    nav ul{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .hero-title{
+        font-size:34px;
+    }
+
+    .profile-img{
+        width:180px;
+        height:180px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .tags{
+        flex-direction:column;
+        gap:8px;
+        font-size:16px;
+    }
+}
