@@ -499,22 +499,34 @@ nav ul li a:hover{
 }
 
 /* ===== PROFILE IMAGE ===== */
+/* ===== PROFILE IMAGE ===== */
 .profile-img{
     width:350px;
     height:350px;
     border-radius:50%;
     object-fit:cover;
 
-    border:10px solid #ff0000;
+    border:8px solid #00FFCC;
 
     box-shadow:
-    0 0 15px #00ffff,
-    0 0 30px #00ffff,
-    0 0 50px #00ffff;
+        0 0 10px #00FFCC,
+        0 0 25px #00FFCC,
+        0 0 50px #00FFCC,
+        0 0 80px rgba(0,255,204,0.5);
 
     margin-bottom:30px;
+
+    transition:0.4s ease;
 }
 
+.profile-img:hover{
+    transform:scale(1.03);
+    box-shadow:
+        0 0 15px #00FFCC,
+        0 0 35px #00FFCC,
+        0 0 70px #00FFCC,
+        0 0 100px rgba(0,255,204,0.8);
+}
 /* ===== NAME ===== */
 .hero h1{
     font-size:72px;
