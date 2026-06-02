@@ -340,3 +340,17 @@ nav ul li a {
         font-size: 14px;
     }
 }
+
+#contact a{
+    color:#00ffcc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#contact a:hover{
+    text-decoration:underline;
+}
+
+#contact p{
+    margin:15px 0;
+}
