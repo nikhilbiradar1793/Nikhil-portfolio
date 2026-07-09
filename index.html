@@ -7,8 +7,14 @@
 
     <title>Nikhil Biradar | Cybersecurity Portfolio</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
@@ -16,272 +22,459 @@
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ================= NAVIGATION ================= -->
 
-<nav>
+    <nav class="navbar">
 
-    <div class="logo">
-        Nikhil Biradar
+        <div class="logo">
+            <span>Nikhil</span> Biradar
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#education">Education</a></li>
+
+            <li><a href="#skills">Skills</a></li>
+
+            <li><a href="#projects">Projects</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="container">
+
+
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <h3>Hello, I'm</h3>
+
+                <h1>Nikhil Biradar</h1>
+
+                <h2>Cybersecurity Engineer</h2>
+
+                <p>
+
+                    Passionate about Ethical Hacking,
+                    Penetration Testing,
+                    Network Security,
+                    Web Security and Python Development.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn">
+
+                        View Projects
+
+                    </a>
+
+                    <a href="Nikhil_Biradar_Resume.pdf"
+                        class="btn btn-outline"
+                        download>
+
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img src="nikss.jpg" alt="Profile Photo">
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats">
+
+            <div class="stat-box">
+
+                <h2>10+</h2>
+
+                <p>Projects</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2>5+</h2>
+
+                <p>Certificates</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <h2>2+</h2>
+
+                <p>Years Learning</p>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section">
+
+            <h2 class="section-title">
+
+                About Me
+
+            </h2>
+
+            <div class="card">
+
+                <p>
+
+                    I am a motivated Cybersecurity Engineer with
+                    knowledge in Penetration Testing,
+                    Vulnerability Assessment,
+                    Network Security,
+                    Web Application Security,
+                    Kali Linux and Python.
+
+                    My objective is to protect organizations from
+                    cyber threats by identifying vulnerabilities
+                    and implementing secure solutions.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <!-- ================= EDUCATION ================= -->
+
+        <section id="education" class="section">
+
+            <h2 class="section-title">
+
+                Education
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>Master of Computer Science</h3>
+
+                    <p>
+
+                        Swami Ramanand Teerth
+                        Marathwada University
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>B.Sc Computer Science</h3>
+
+                    <p>
+
+                        CGPA : 8.22 (A+)
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>HSC & SSC</h3>
+
+                    <p>
+
+                        81.50% | 83.60%
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section">
+
+            <h2 class="section-title">
+
+                Technical Skills
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    <h3>Networking</h3>
+
+                    <p>
+
+                        TCP/IP, DNS, DHCP,
+                        Routing, Switching
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <h3>Cyber Security</h3>
+
+                    <p>
+
+                        VAPT,
+                        Web Security,
+                        Risk Assessment
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-solid fa-terminal"></i>
+
+                    <h3>Tools</h3>
+
+                    <p>
+
+                        Kali Linux,
+                        Nmap,
+                        Burp Suite,
+                        Metasploit,
+                        Wireshark
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <i class="fa-brands fa-python"></i>
+
+                    <h3>Programming</h3>
+
+                    <p>
+
+                        Python,
+                        Bash,
+                        HTML,
+                        CSS,
+                        JavaScript
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <h2 class="section-title">
+
+                Projects
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>
+
+                        Advanced Network Security Assessment Tool
+
+                    </h3>
+
+                    <p>
+
+                        Python based vulnerability scanner
+                        with automated reporting.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>
+
+                        Web Application VAPT
+
+                    </h3>
+
+                    <p>
+
+                        Performed VAPT on
+                        DVWA and OWASP Juice Shop.
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>
+
+                        Automated Network Scanner
+
+                    </h3>
+
+                    <p>
+
+                        Built using Python,
+                        Socket Programming
+                        and Nmap.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section">
+
+            <h2 class="section-title">
+
+                Contact Me
+
+            </h2>
+
+            <div class="card contact-card">
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 9322509412
+
+                </p>
+
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    nikhilbiradar1793@gmail.com
+
+                </p>
+
+                <p>
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                    linkedin.com/in/nikhil-balaji-biradar
+
+                </p>
+
+                <p>
+
+                    <i class="fa-brands fa-github"></i>
+
+                    github.com/nikhilbiradar1793
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <p>
+
+                © 2026 Nikhil Biradar |
+                Cybersecurity Portfolio
+
+            </p>
+
+        </footer>
+
     </div>
 
-    <ul>
 
-        <li><a href="#about">About</a></li>
 
-        <li><a href="#education">Education</a></li>
+    <!-- JavaScript -->
 
-        <li><a href="#skills">Skills</a></li>
-
-        <li><a href="#projects">Projects</a></li>
-
-        <li><a href="#certifications">Certificates</a></li>
-
-        <li><a href="#resume">Resume</a></li>
-
-        <li><a href="#contact">Contact</a></li>
-
-    </ul>
-
-</nav>
-
-<!-- ================= HERO ================= -->
-
-<header class="hero">
-
-    <img src="nikss.jpg" class="profile">
-
-    <h1>Nikhil Biradar</h1>
-
-    <h2>Cybersecurity Engineer</h2>
-
-    <p>
-
-        Ethical Hacker |
-        Penetration Tester |
-        Network Security Enthusiast
-
-    </p>
-
-    <div class="buttons">
-
-        <a href="#projects" class="btn">
-            View Projects
-        </a>
-
-        <a href="Nikhil_Biradar_Resume.pdf" class="btn2" download>
-            Download Resume
-        </a>
-
-    </div>
-
-</header>
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <div class="card">
-
-        <p>
-
-            Motivated Cybersecurity professional with strong knowledge of
-            Penetration Testing, Vulnerability Assessment,
-            Network Security, Python scripting,
-            Kali Linux and Web Application Security.
-
-            Passionate about identifying security vulnerabilities
-            and protecting digital infrastructures.
-
-        </p>
-
-    </div>
-
-</section>
-
-<!-- ================= EDUCATION ================= -->
-
-<section id="education">
-
-<h2>Education</h2>
-
-<div class="container">
-
-<div class="card">
-
-<h3>Master of Computer Science</h3>
-
-<p>Swami Ramanand Teerth Marathwada University</p>
-
-</div>
-
-<div class="card">
-
-<h3>B.Sc Computer Science</h3>
-
-<p>CGPA : 8.22 (A+)</p>
-
-</div>
-
-<div class="card">
-
-<h3>HSC & SSC</h3>
-
-<p>81.50% | 83.60%</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= SKILLS ================= -->
-
-<section id="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="container">
-
-<div class="card">
-
-<h3>Networking</h3>
-
-<p>TCP/IP, DNS, DHCP, Routing, Switching</p>
-
-</div>
-
-<div class="card">
-
-<h3>Cyber Security</h3>
-
-<p>VAPT, Web Security, Risk Assessment</p>
-
-</div>
-
-<div class="card">
-
-<h3>Tools</h3>
-
-<p>Nmap, Burp Suite, Metasploit, Wireshark, OWASP ZAP</p>
-
-</div>
-
-<div class="card">
-
-<h3>Programming</h3>
-
-<p>Python, Bash</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="container">
-
-<div class="card">
-
-<h3>Advanced Network Security Assessment Tool</h3>
-
-<p>Python based vulnerability scanner with automated reporting.</p>
-
-</div>
-
-<div class="card">
-
-<h3>Web Application VAPT</h3>
-
-<p>Performed VAPT on DVWA and OWASP Juice Shop.</p>
-
-</div>
-
-<div class="card">
-
-<h3>Automated Network Scanner</h3>
-
-<p>Developed using Python, Nmap and Socket Programming.</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= CERTIFICATIONS ================= -->
-
-<section id="certifications">
-
-<h2>Certifications</h2>
-
-<div class="card">
-
-<ul>
-
-<li>Cybersecurity & Ethical Hacking - Fortune Cloud Technology</li>
-
-<li>Penetration Testing & Ethical Hacking - Great Learning</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="card">
-
-<p>📧 nikhilbiradar1793@gmail.com</p>
-
-<p>📞 +91 9322509412</p>
-
-<p>
-
-<a href="https://github.com/nikhilbiradar1793">
-
-GitHub
-
-</a>
-
-</p>
-
-<p>
-
-<a href="https://www.linkedin.com/in/nikhil-balaji-biradar">
-
-LinkedIn
-
-</a>
-
-</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-© 2026 Nikhil Biradar |
-Cybersecurity Portfolio
-
-</p>
-
-</footer>
+    <script src="script.js"></script>
 
 </body>
 
