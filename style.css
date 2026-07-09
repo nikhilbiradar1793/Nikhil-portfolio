@@ -288,3 +288,238 @@ body{
     opacity:0;
     transition:opacity .8s;
 }
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Large Laptop (1200px and below) */
+@media (max-width:1200px){
+
+.container{
+    width:95%;
+}
+
+.hero{
+    padding:60px;
+}
+
+.hero-content h1{
+    font-size:48px;
+}
+
+.hero-image img{
+    width:320px;
+    height:380px;
+}
+
+}
+
+
+/* Laptop (992px and below) */
+@media (max-width:992px){
+
+.navbar{
+    padding:20px 30px;
+}
+
+.nav-links{
+    gap:20px;
+}
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding:50px 30px;
+}
+
+.hero-content{
+    width:100%;
+    padding:0;
+}
+
+.hero-content h1{
+    font-size:40px;
+}
+
+.hero-content h2{
+    font-size:24px;
+}
+
+.hero-image{
+    margin-bottom:30px;
+}
+
+.hero-image img{
+    width:280px;
+    height:320px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.stats{
+    flex-wrap:wrap;
+}
+
+}
+
+
+/* Tablet (768px and below) */
+@media (max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    padding:20px;
+}
+
+.logo{
+    margin-bottom:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.nav-links li{
+    margin:5px;
+}
+
+.hero{
+    padding:40px 20px;
+}
+
+.hero-content h1{
+    font-size:34px;
+}
+
+.hero-content h2{
+    font-size:22px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.hero-image img{
+    width:240px;
+    height:280px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn,
+.btn-outline{
+    width:220px;
+    text-align:center;
+}
+
+.section{
+    padding:50px 20px;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    flex-direction:column;
+    align-items:center;
+}
+
+.stat-box{
+    width:90%;
+}
+
+footer{
+    text-align:center;
+}
+
+}
+
+
+/* Mobile Phone (576px and below) */
+@media (max-width:576px){
+
+.container{
+    width:100%;
+    border-radius:0;
+}
+
+.navbar{
+    padding:15px;
+}
+
+.logo{
+    font-size:22px;
+}
+
+.nav-links{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-links a{
+    font-size:15px;
+}
+
+.hero{
+    padding:30px 15px;
+}
+
+.hero-image img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+}
+
+.hero-content h1{
+    font-size:28px;
+}
+
+.hero-content h2{
+    font-size:18px;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+.btn,
+.btn-outline{
+    width:100%;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+.card{
+    padding:20px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+.card p{
+    font-size:15px;
+}
+
+.stat-box{
+    width:100%;
+}
+
+}
