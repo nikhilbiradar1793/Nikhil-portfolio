@@ -1538,3 +1538,99 @@ textarea:focus{
 }
 
 }
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media screen and (max-width:768px){
+
+.navbar{
+    padding:15px 20px;
+    flex-wrap:wrap;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+.nav-links{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    background:white;
+    margin-top:15px;
+    padding:15px 0;
+}
+
+.nav-links.active{
+    display:flex;
+}
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding:100px 20px 40px;
+}
+
+.hero-content{
+    flex:100%;
+}
+
+.hero-content h1{
+    font-size:32px;
+}
+
+.hero-content h2{
+    font-size:20px;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn{
+    width:220px;
+}
+
+.hero-image{
+    width:100%;
+}
+
+.hero-image img{
+    width:220px;
+    max-width:90%;
+    height:auto;
+}
+
+.about-container{
+    flex-direction:column;
+}
+
+.about-image img{
+    width:220px;
+    max-width:90%;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.contact-container{
+    grid-template-columns:1fr;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.section{
+    padding:60px 20px;
+}
+
+}
