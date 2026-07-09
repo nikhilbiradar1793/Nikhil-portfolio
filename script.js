@@ -1,6 +1,25 @@
-/*=========================================
-      SMOOTH SCROLL
-=========================================*/
+// ==========================================
+// MOBILE MENU
+// ==========================================
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Close menu after clicking a link
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+
+// ==========================================
+// SMOOTH SCROLL
+// ==========================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
@@ -9,9 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
 
         document.querySelector(this.getAttribute("href")).scrollIntoView({
-
-            behavior:"smooth"
-
+            behavior: "smooth"
         });
 
     });
@@ -19,34 +36,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-/*=========================================
-      ACTIVE NAVIGATION
-=========================================*/
+// ==========================================
+// ACTIVE NAVIGATION
+// ==========================================
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+const links = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    let current="";
+    let current = "";
 
-    sections.forEach(section=>{
+    sections.forEach(section => {
 
-        const sectionTop=section.offsetTop-120;
+        const sectionTop = section.offsetTop - 120;
 
-        if(window.pageYOffset>=sectionTop){
+        if(window.scrollY >= sectionTop){
 
-            current=section.getAttribute("id");
+            current = section.getAttribute("id");
 
         }
 
     });
 
-    navLinks.forEach(link=>{
+    links.forEach(link => {
 
         link.classList.remove("active");
 
-        if(link.getAttribute("href")==="#" + current){
+        if(link.getAttribute("href") == "#" + current){
 
             link.classList.add("active");
 
@@ -57,36 +74,34 @@ window.addEventListener("scroll",()=>{
 });
 
 
-/*=========================================
-      NAVBAR SHADOW
-=========================================*/
+// ==========================================
+// NAVBAR SHADOW
+// ==========================================
 
-const navbar=document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    if(window.scrollY>50){
+    if(window.scrollY > 50){
 
-        navbar.style.boxShadow="0 10px 25px rgba(0,0,0,.15)";
+        navbar.style.boxShadow = "0 10px 25px rgba(0,0,0,.15)";
 
-    }
+    }else{
 
-    else{
-
-        navbar.style.boxShadow="0 5px 15px rgba(0,0,0,.08)";
+        navbar.style.boxShadow = "0 5px 15px rgba(0,0,0,.08)";
 
     }
 
 });
 
 
-/*=========================================
-      SCROLL REVEAL ANIMATION
-=========================================*/
+// ==========================================
+// SCROLL REVEAL
+// ==========================================
 
-const revealElements=document.querySelectorAll(".section,.card,.stat-box");
+const hiddenElements = document.querySelectorAll(".section,.card,.stat-box");
 
-const observer=new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries)=>{
 
     entries.forEach(entry=>{
 
@@ -102,50 +117,48 @@ const observer=new IntersectionObserver((entries)=>{
     threshold:0.2
 });
 
-revealElements.forEach(element=>{
+hiddenElements.forEach(el=>{
 
-    element.classList.add("hidden");
+    el.classList.add("hidden");
 
-    observer.observe(element);
+    observer.observe(el);
 
 });
 
 
-/*=========================================
-      TYPING EFFECT
-=========================================*/
+// ==========================================
+// TYPING EFFECT
+// ==========================================
 
-const words=[
+const words = [
 
-"Cybersecurity Engineer",
+    "Cybersecurity Engineer",
 
-"Ethical Hacker",
+    "Ethical Hacker",
 
-"Penetration Tester",
+    "Penetration Tester",
 
-"Python Developer"
+    "Python Developer"
 
 ];
 
-const typingElement=document.querySelector(".hero-content h2");
+const typing = document.querySelector(".hero-content h2");
 
-let wordIndex=0;
-
-let charIndex=0;
-
-let deleting=false;
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
 function typeEffect(){
 
-    let currentWord=words[wordIndex];
+    let currentWord = words[wordIndex];
 
     if(!deleting){
 
-        typingElement.textContent=currentWord.substring(0,charIndex++);
+        typing.textContent = currentWord.substring(0,charIndex++);
 
-        if(charIndex>currentWord.length){
+        if(charIndex > currentWord.length){
 
-            deleting=true;
+            deleting = true;
 
             setTimeout(typeEffect,1500);
 
@@ -153,17 +166,15 @@ function typeEffect(){
 
         }
 
-    }
+    }else{
 
-    else{
+        typing.textContent = currentWord.substring(0,charIndex--);
 
-        typingElement.textContent=currentWord.substring(0,charIndex--);
+        if(charIndex == 0){
 
-        if(charIndex===0){
+            deleting = false;
 
-            deleting=false;
-
-            wordIndex=(wordIndex+1)%words.length;
+            wordIndex = (wordIndex+1)%words.length;
 
         }
 
@@ -176,37 +187,33 @@ function typeEffect(){
 typeEffect();
 
 
-/*=========================================
-      COUNTER ANIMATION
-=========================================*/
+// ==========================================
+// COUNTER ANIMATION
+// ==========================================
 
-const counters=document.querySelectorAll(".stat-box h2");
+const counters = document.querySelectorAll(".stat-box h2");
 
 counters.forEach(counter=>{
 
-    const update=()=>{
+    const target = parseInt(counter.innerText);
 
-        const target=+counter.innerText.replace("+","");
+    let count = 0;
 
-        const count=+counter.getAttribute("data-count")||0;
+    const speed = target / 80;
 
-        const increment=Math.ceil(target/60);
+    function update(){
 
-        if(count<target){
+        if(count < target){
 
-            const newCount=count+increment;
+            count += speed;
 
-            counter.setAttribute("data-count",newCount);
+            counter.innerText = Math.ceil(count) + "+";
 
-            counter.innerText=newCount+"+";
+            requestAnimationFrame(update);
 
-            setTimeout(update,25);
+        }else{
 
-        }
-
-        else{
-
-            counter.innerText=target+"+";
+            counter.innerText = target + "+";
 
         }
 
@@ -217,54 +224,33 @@ counters.forEach(counter=>{
 });
 
 
-/*=========================================
-      PROFILE IMAGE ANIMATION
-=========================================*/
+// ==========================================
+// BACK TO TOP BUTTON
+// ==========================================
 
-const image=document.querySelector(".hero-image img");
+const topBtn = document.createElement("button");
 
-image.addEventListener("mousemove",()=>{
+topBtn.innerHTML = "↑";
 
-    image.style.transform="scale(1.05) rotate(2deg)";
+topBtn.classList.add("top-btn");
 
-});
-
-image.addEventListener("mouseleave",()=>{
-
-    image.style.transform="scale(1) rotate(0deg)";
-
-});
-
-
-/*=========================================
-      BACK TO TOP BUTTON
-=========================================*/
-
-const topButton=document.createElement("button");
-
-topButton.innerHTML="↑";
-
-topButton.className="top-btn";
-
-document.body.appendChild(topButton);
+document.body.appendChild(topBtn);
 
 window.addEventListener("scroll",()=>{
 
-    if(window.scrollY>400){
+    if(window.scrollY > 300){
 
-        topButton.style.display="block";
+        topBtn.style.display="block";
 
-    }
+    }else{
 
-    else{
-
-        topButton.style.display="none";
+        topBtn.style.display="none";
 
     }
 
 });
 
-topButton.addEventListener("click",()=>{
+topBtn.addEventListener("click",()=>{
 
     window.scrollTo({
 
@@ -277,12 +263,57 @@ topButton.addEventListener("click",()=>{
 });
 
 
-/*=========================================
-      LOADING ANIMATION
-=========================================*/
+// ==========================================
+// IMAGE HOVER EFFECT
+// ==========================================
+
+const profile = document.querySelector(".hero-image img");
+
+profile.addEventListener("mouseenter",()=>{
+
+    profile.style.transform="scale(1.05)";
+
+});
+
+profile.addEventListener("mouseleave",()=>{
+
+    profile.style.transform="scale(1)";
+
+});
+
+
+// ==========================================
+// OPTIONAL DARK MODE
+// ==========================================
+
+// HTML:
+// <button id="darkMode">🌙</button>
+
+const darkBtn = document.getElementById("darkMode");
+
+if(darkBtn){
+
+    darkBtn.addEventListener("click",()=>{
+
+        document.body.classList.toggle("dark");
+
+    });
+
+}
+
+
+// ==========================================
+// LOADER
+// ==========================================
 
 window.addEventListener("load",()=>{
 
-    document.body.style.opacity="1";
+    const loader = document.querySelector(".loader");
+
+    if(loader){
+
+        loader.style.display="none";
+
+    }
 
 });
