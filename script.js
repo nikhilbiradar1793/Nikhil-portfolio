@@ -28,6 +28,4 @@ reader.readAsDataURL(file);
 
 }
 
-});
-
-
+})
